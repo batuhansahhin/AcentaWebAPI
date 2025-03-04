@@ -1,0 +1,27 @@
+<h2>Kullanıcılar</h2>
+
+<div *ngIf="loading"> Yükleniyor...
+</div>
+
+<table *ngIf="!loading && userData.length > 0"> <thead>
+    <tr>
+      <th>Kullanıcı Adı</th>
+      <th>Email</th>
+      <th>Ad</th>
+      <th>Soyad</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of userData">
+      <td>{{ user.userName }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.firstName }}</td>
+      <td>{{ user.lastName }}</td>
+      <td>{{ user.userType }}</td>
+
+    </tr>
+  </tbody>
+</table>
+
+<div *ngIf="!loading && userData.length == 0"> Kullanıcı Bulunamadı.
+</div>

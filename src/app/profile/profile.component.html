@@ -1,0 +1,25 @@
+<div class="profile-container">
+  <main class="content">
+    <h2>Profil Bilgileri</h2>
+
+    <div *ngIf="user; else loadingOrError">
+      <div class="profile-info">
+        <label>Ad Soyad:</label>
+        <span>{{ user.name }}</span>
+      </div>
+      <div class="profile-info">
+        <label>Email:</label>
+        <span>{{ user.email }}</span>
+      </div>
+      </div>
+
+    <ng-template #loadingOrError>
+      <div ngIf="isLoading">
+        <p>Profil bilgileri yükleniyor...</p>
+      </div>
+      <div ngIf="error">
+        <p>Profil bilgileri yüklenirken bir hata oluştu</p>
+      </div>
+    </ng-template>
+  </main>
+</div>

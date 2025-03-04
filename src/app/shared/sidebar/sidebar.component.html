@@ -1,0 +1,83 @@
+<div class="sidebar">
+  <div class="search-box">
+    <i class="fas fa-search"></i>
+    <input type="text" placeholder="Arama..." />
+  </div>
+
+  <nav>
+    <div class="menu-group">
+      <div class="group-header" (click)="toggleGroup('sigorta')">
+        <i class="fas fa-angle-right" [class.rotated]="isGroupExpanded('sigorta')"></i>
+        <span>Sigorta Sorgulama</span>
+      </div>
+      <div class="group-items" [class.expanded]="isGroupExpanded('sigorta')">
+        <a [routerLink]="'/police-yonetimi'" routerLinkActive="active">
+          <i class="fas fa-file-alt"></i>
+          <span>Poliçe Yönetimi</span>
+        </a>
+        <a [routerLink]="'/fiyat-sorgusu'" routerLinkActive="active">
+          <i class="fas fa-search-dollar"></i>
+          <span>Fiyat Sorgusu</span>
+        </a>
+        <a [routerLink]="'/siparis-yonetimi'" routerLinkActive="active">
+          <i class="fas fa-shopping-cart"></i>
+          <span>Sipariş Yönetimi</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="menu-group">
+      <div class="group-header" (click)="toggleGroup('sistem')">
+        <i class="fas fa-angle-right" [class.rotated]="isGroupExpanded('sistem')"></i>
+        <span>Sistem Tanımları</span>
+      </div>
+      <div class="group-items" [class.expanded]="isGroupExpanded('sistem')">
+        <a [routerLink]="'/pages/users'" routerLinkActive="active">
+          <i class="fas fa-users"></i>
+          <span>Kullanıcılar</span>
+        </a>        
+        <a [routerLink]="'/kullanici-sozlesmesi'" routerLinkActive="active">
+          <i class="fas fa-file-contract"></i>
+          <span>Kullanıcı Sözleşmesi</span>
+        </a>
+        <a [routerLink]="'/kullanici-gruplari'" routerLinkActive="active">
+          <i class="fas fa-users-cog"></i>
+          <span>Kullanıcı Grupları</span>
+        </a>
+        <a [routerLink]="'/uygulama-yonetimi'" routerLinkActive="active">
+          <i class="fas fa-cog"></i>
+          <span>Uygulama Yönetimi</span>
+        </a>
+        <a [routerLink]="'/sistem-yonetimi'" routerLinkActive="active">
+          <i class="fas fa-server"></i>
+          <span>Sistem Yönetimi</span>
+        </a>
+        <a [routerLink]="'/entegrasyon-yonetimi'" routerLinkActive="active">
+          <i class="fas fa-plug"></i>
+          <span>Entegrasyon Yönetimi</span>
+        </a>
+        <a [routerLink]="'/parametreler'" routerLinkActive="active">
+          <i class="fas fa-sliders-h"></i>
+          <span>Sistem Parametreleri</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="menu-group">
+      <div class="group-header" (click)="toggleGroup('finans')">
+        <i class="fas fa-angle-right" [class.rotated]="isGroupExpanded('finans')"></i>
+        <span>Finans & Raporlar</span>
+      </div>
+      <div class="group-items" [class.expanded]="isGroupExpanded('finans')">
+        <a [routerLink]="'/tahsilatlar'" routerLinkActive="active">
+          <i class="fas fa-money-bill-wave"></i>
+          <span>Tahsilatlar</span>
+        </a>
+        <a [routerLink]="'/raporlar'" routerLinkActive="active">
+          <i class="fas fa-chart-bar"></i>
+          <span>Raporlar</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+</div>

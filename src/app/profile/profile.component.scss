@@ -1,0 +1,38 @@
+:host {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.profile-container {
+  padding: 20px;
+  width: 100%;
+
+  .content {
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.rotate {
+  transform: rotate(90deg);
+}
+
+.search-box {
+  width: 100%;
+  padding: 10px;
+  margin: 0;
+}
